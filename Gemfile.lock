@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    OptionParser (0.5.1)
+    eventmachine (0.12.10)
+    nokogiri (1.5.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  OptionParser
+  eventmachine
+  nokogiri
