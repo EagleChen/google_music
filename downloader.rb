@@ -21,7 +21,7 @@ usage unless album_url
 puts album_url
 BASE_URL = options[:baseurl] || "http://www.google.cn"
 BASE_FOLDER = options[:dir] || "."
-CONCuRRENCY = 3
+CONCURRENCY = 3
 
 def usage
   puts "Usage: ruby downloader.rb <album_url> [-d DIRECTORY] [-b BASEURL]"
@@ -55,7 +55,7 @@ def download_album(album_url)
     size = trs.size
     @song_list = {}
 
-    EM.threadpool_size = CONCuRRENCY
+    EM.threadpool_size = CONCURRENCY
     trs.each do |tr|
       node = tr.xpath('./td')[7].xpath('./a')[0]
       song_name = tr.xpath('./td')[2].xpath('./a')[0].text
